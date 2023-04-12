@@ -1,3 +1,4 @@
 import Button from './Button';
 import { ActionCard } from './ActionCard';
-export { Button, ActionCard };
+import { ActionCardWidget } from './ActionCardWidget';
+export { Button, ActionCard, ActionCardWidget };
