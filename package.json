@@ -26,6 +26,8 @@
     "react-modal": "^3.16.1",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.14",
     "tslib": "^2.5.0",

@@ -4,4 +4,10 @@ interface ButtonProps {
 }
 declare const Button: (props: ButtonProps) => JSX.Element;
 
-export { Button };
+declare const ActionCard: ({ onClose, currentData, onNext }: {
+    onClose: any;
+    currentData: any;
+    onNext: any;
+}) => JSX.Element;
+
+export { ActionCard, Button };
