@@ -19,9 +19,11 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/react": "^16.14.39",
+    "@types/react-modal": "^3.13.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "react": "^16.14.0",
+    "react-modal": "^3.16.1",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
     "style-loader": "^2.0.0",
@@ -36,5 +38,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {}
 }

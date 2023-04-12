@@ -1,0 +1,196 @@
+.action-box-card {
+  position: relative;
+  background: #037B98;
+  border-radius: 6px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.action-box-card.widget-card {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 390px;
+}
+
+.action-box-card.question-card {
+  height: 430px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-box-card .centered {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-box-card h2,
+.action-box-card h4 {
+  color: #ffffff;
+  line-height: 1.45;
+}
+
+.action-box-card h2 {
+  font-size: 26px;
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+}
+
+.action-box-card h4 {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.action-box-card .text-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 1em 0;
+  min-height: 100px;
+  overflow-y: auto;
+  padding-right: 20px;
+  flex: 1;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: none;
+  background-color: none;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+  background-color: none;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 6px #024B5C;
+  background-color: #555;
+}
+
+.action-box-card button {
+  background: #FFFFFF;
+  border-radius: 20px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-box-card select {
+  background: #FFFFFF;
+  border-radius: 20px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  position: relative;
+  width: 100%;
+}
+
+.action-box-card select.empty,
+.action-box-card select .muted-option {
+  font-style: italic;
+  color: #989898;
+}
+
+.action-box-card select option {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  height: 40px;
+  font-style: normal;
+  color: #000000;
+}
+
+.action-box-card .select-wrapper {
+  width: 60%;
+  position: relative;
+}
+
+
+.action-box-card .select-wrapper .caret {
+  position: absolute;
+  right: 1em;
+  top: 0.75em;
+}
+
+.action-box-card .mb {
+  margin-bottom: 1em;
+}
+
+.action-box-card button+button {
+  margin-left: 1em;
+}
+
+.action-box-card button.button-yes.selected {
+  background: #81C216;
+  color: #ffffff;
+}
+
+.action-box-card button.button-no.selected {
+  background: #E91C1C;
+  color: #ffffff;
+}
+
+.action-box-card button.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background: none;
+}
+
+.action-box-card .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #C7EAF3;
+}
+
+.action-box-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-box-modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr.divider {
+  width: 100%;
+  border: none;
+  border-bottom: 1px dashed #C7EAF3;
+}
