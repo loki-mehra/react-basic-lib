@@ -1,3 +1,6 @@
 /// <reference types="react" />
 import '../shared/styles.css';
-export declare const ActionCardWidget: () => JSX.Element;
+export interface ActionCardWidgetProps {
+    classNames?: string;
+}
+export declare const ActionCardWidget: ({ classNames }: ActionCardWidgetProps) => JSX.Element;

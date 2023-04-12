@@ -13,6 +13,9 @@ interface ActionCardProps {
 }
 declare const ActionCard: ({ currentData, onClose, onNext, }: ActionCardProps) => JSX.Element;
 
-declare const ActionCardWidget: () => JSX.Element;
+interface ActionCardWidgetProps {
+    classNames?: string;
+}
+declare const ActionCardWidget: ({ classNames }: ActionCardWidgetProps) => JSX.Element;
 
 export { ActionCard, ActionCardWidget, Button };

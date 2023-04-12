@@ -6,7 +6,11 @@ import '../shared/styles.css';
 
 import { dummyData } from '../shared/dummyData';
 
-export const ActionCardWidget = () => {
+export interface ActionCardWidgetProps {
+  classNames?: string;
+}
+
+export const ActionCardWidget = ({ classNames }: ActionCardWidgetProps) => {
   const [isOpen, setOpen] = useState(false);
   const [currentData, setCurrentData] = useState<any>(null);
 
@@ -39,7 +43,7 @@ export const ActionCardWidget = () => {
     <div>
       {currentData ? (
         <>
-          <div className='action-box-card widget-card'>
+          <div className={`action-box-card widget-card ${classNames}`}>
             <IdeaIcon />
             <h4>{currentData.question}</h4>
             <button className='link' onClick={handleOpenModal}>
