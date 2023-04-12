@@ -2417,7 +2417,7 @@ var ActionCard = function (_a) {
 
 var lib = {exports: {}};
 
-var Modal$1 = {};
+var Modal$2 = {};
 
 var reactDom = {exports: {}};
 
@@ -29298,10 +29298,10 @@ var reactLifecyclesCompat_es = /*#__PURE__*/Object.freeze({
 
 var require$$6 = /*@__PURE__*/getAugmentedNamespace(reactLifecyclesCompat_es);
 
-Object.defineProperty(Modal$1, "__esModule", {
+Object.defineProperty(Modal$2, "__esModule", {
   value: true
 });
-Modal$1.bodyOpenClassName = Modal$1.portalClassName = undefined;
+Modal$2.bodyOpenClassName = Modal$2.portalClassName = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -29343,8 +29343,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var portalClassName = Modal$1.portalClassName = "ReactModalPortal";
-var bodyOpenClassName = Modal$1.bodyOpenClassName = "ReactModal__Body--open";
+var portalClassName = Modal$2.portalClassName = "ReactModalPortal";
+var bodyOpenClassName = Modal$2.bodyOpenClassName = "ReactModal__Body--open";
 
 var isReact16 = _safeHTMLElement.canUseDOM && _reactDom2.default.createPortal !== undefined;
 
@@ -29360,7 +29360,7 @@ function getParentElement(parentSelector) {
   return parentSelector();
 }
 
-var Modal = function (_Component) {
+var Modal$1 = function (_Component) {
   _inherits(Modal, _Component);
 
   function Modal() {
@@ -29491,7 +29491,7 @@ var Modal = function (_Component) {
   return Modal;
 }(_react.Component);
 
-Modal.propTypes = {
+Modal$1.propTypes = {
   isOpen: _propTypes2.default.bool.isRequired,
   style: _propTypes2.default.shape({
     content: _propTypes2.default.object,
@@ -29531,7 +29531,7 @@ Modal.propTypes = {
   overlayElement: _propTypes2.default.func,
   contentElement: _propTypes2.default.func
 };
-Modal.defaultProps = {
+Modal$1.defaultProps = {
   isOpen: false,
   portalClassName: portalClassName,
   bodyOpenClassName: bodyOpenClassName,
@@ -29561,7 +29561,7 @@ Modal.defaultProps = {
     );
   }
 };
-Modal.defaultStyles = {
+Modal$1.defaultStyles = {
   overlay: {
     position: "fixed",
     top: 0,
@@ -29587,15 +29587,15 @@ Modal.defaultStyles = {
 };
 
 
-(0, _reactLifecyclesCompat.polyfill)(Modal);
+(0, _reactLifecyclesCompat.polyfill)(Modal$1);
 
 if (process.env.NODE_ENV !== "production") {
-  Modal.setCreateHTMLElement = function (fn) {
+  Modal$1.setCreateHTMLElement = function (fn) {
     return createHTMLElement = fn;
   };
 }
 
-Modal$1.default = Modal;
+Modal$2.default = Modal$1;
 
 lib.exports;
 
@@ -29605,7 +29605,7 @@ lib.exports;
 	  value: true
 	});
 
-	var _Modal = Modal$1;
+	var _Modal = Modal$2;
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -29615,7 +29615,95 @@ lib.exports;
 	module.exports = exports["default"]; 
 } (lib, lib.exports));
 
-lib.exports;
+var libExports = lib.exports;
+var Modal = /*@__PURE__*/getDefaultExportFromCjs(libExports);
 
-export { ActionCard, Button };
+var dummyData = {
+    '0': {
+        id: 0,
+        question: 'Do you know the risk factors for chronic kidney disease (CKD)?',
+        skippable: false,
+        type: 'text',
+        description: 'This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. This is a long long description to test this widget. ',
+        hasNext: true,
+        nextId: '1',
+    },
+    '1': {
+        id: 1,
+        question: 'Do you know the risk factors for chronic kidney disease (CKD)?',
+        skippable: true,
+        type: 'yes_no',
+        description: '',
+        hasNext: true,
+        nextId: '2',
+        answerDescription: {
+            Y: 'Great job getting your labs done! To get more personalized content based on your results, please update your lab data here.',
+            N: 'Your Glomerular Filtration Rate (GFR) number tells your doctor how well your kidneys are working. Kidney disease may not cause any symptoms until it is severe so ask your doctor today about checking the health of your kidneys. You can track your number here.',
+        },
+    },
+    '2': {
+        id: 2,
+        question: 'Do you know the risk factors for chronic kidney disease (CKD)?',
+        skippable: true,
+        type: 'select',
+        options: [
+            { value: 'stage-0', name: 'Not Applicable' },
+            { value: 'stage-1', name: 'Stage 1' },
+            { value: 'stage-2', name: 'Stage 2' },
+            { value: 'stage-3', name: 'Stage 3' },
+            { value: 'stage-4', name: 'Stage 4' },
+        ],
+        description: 'This is the a description to show drop-down option and is skippable. Next page will not be select but non-skippable.',
+        hasNext: true,
+        nextId: '3',
+    },
+    '3': {
+        id: 3,
+        question: 'Do you know the risk factors for chronic kidney disease (CKD)?',
+        skippable: false,
+        type: 'select',
+        options: [
+            { value: 'stage-0', name: 'Not Applicable' },
+            { value: 'stage-1', name: 'Stage 1' },
+            { value: 'stage-2', name: 'Stage 2' },
+            { value: 'stage-3', name: 'Stage 3' },
+            { value: 'stage-4', name: 'Stage 4' },
+        ],
+        description: 'This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page. This is the a description to show drop-down option and is last page.',
+        hasNext: false,
+    },
+};
+
+var ActionCardWidget = function () {
+    var _a = reactExports.useState(false), isOpen = _a[0], setOpen = _a[1];
+    var _b = reactExports.useState(null), currentData = _b[0], setCurrentData = _b[1];
+    var fetchQuestion = function (id) {
+        if (!id) {
+            setOpen(false);
+        }
+        // API call to fetch
+        setCurrentData(dummyData[id]);
+    };
+    reactExports.useState(function () {
+        fetchQuestion('0');
+    }, []);
+    var handleOpenModal = function () {
+        setOpen(true);
+    };
+    var handleCloseModal = function () {
+        setOpen(false);
+    };
+    var handleNextClick = function (nextId) {
+        fetchQuestion(nextId);
+    };
+    return currentData ? (React.createElement(React.Fragment, null,
+        React.createElement("div", { className: 'action-box-card widget-card' },
+            React.createElement(IdeaIcon, null),
+            React.createElement("h4", null, currentData.question),
+            React.createElement("button", { className: 'link', onClick: handleOpenModal }, "Read more")),
+        React.createElement(Modal, { isOpen: isOpen, onRequestClose: handleCloseModal, shouldCloseOnOverlayClick: true, shouldCloseOnEsc: true, contentLabel: 'Action-Box Modal', overlayClassName: 'action-box-modal-overlay', className: 'action-box-modal-content' },
+            React.createElement(ActionCard, { onClose: handleCloseModal, currentData: currentData, onNext: handleNextClick })))) : (React.createElement(React.Fragment, null));
+};
+
+export { ActionCard, ActionCardWidget, Button };
 //# sourceMappingURL=index.js.map

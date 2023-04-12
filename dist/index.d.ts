@@ -10,4 +10,6 @@ declare const ActionCard: ({ onClose, currentData, onNext }: {
     onNext: any;
 }) => JSX.Element;
 
-export { ActionCard, Button };
+declare const ActionCardWidget: () => JSX.Element;
+
+export { ActionCard, ActionCardWidget, Button };
