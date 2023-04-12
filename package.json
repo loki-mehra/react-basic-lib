@@ -23,6 +23,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "react": "^16.9.0",
+    "react-dom": "16.9.0",
     "react-modal": "^3.16.1",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
@@ -36,7 +37,8 @@
     "webpack-cli": "^4.4.0"
   },
   "peerDependencies": {
-    "react": "^16.9.0"
+    "react": "^16.9.0",
+    "react-dom": "16.9.0"
   },
   "files": [
     "dist"
