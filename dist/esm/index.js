@@ -110,7 +110,7 @@ var ActionSelect = function (_a) {
 };
 
 var ActionCard = function (_a) {
-    var onClose = _a.onClose, currentData = _a.currentData, onNext = _a.onNext;
+    var currentData = _a.currentData, onClose = _a.onClose, onNext = _a.onNext;
     var _b = useState({}), cardData = _b[0], setCardData = _b[1];
     var _c = useState(''), selected = _c[0], setSelected = _c[1];
     useEffect(function () {
@@ -169,7 +169,7 @@ var ActionCard = function (_a) {
         return React.createElement(React.Fragment, null);
     };
     return (React.createElement("div", { className: 'action-box-card question-card' },
-        React.createElement("div", { className: 'close', onClick: onClose },
+        React.createElement("div", { className: 'close', onClick: function (e) { return onClose(e); } },
             React.createElement(CloseIcon, null)),
         React.createElement("div", { className: 'centered' },
             React.createElement(IdeaIcon, null)),
@@ -259,13 +259,13 @@ var ActionCardWidget = function () {
     var handleNextClick = function (nextId) {
         fetchQuestion(nextId);
     };
-    return currentData ? (React.createElement(React.Fragment, null,
+    return (React.createElement("div", null, currentData ? (React.createElement(React.Fragment, null,
         React.createElement("div", { className: 'action-box-card widget-card' },
             React.createElement(IdeaIcon, null),
             React.createElement("h4", null, currentData.question),
             React.createElement("button", { className: 'link', onClick: handleOpenModal }, "Read more")),
         React.createElement(Modal, { isOpen: isOpen, onRequestClose: handleCloseModal, shouldCloseOnOverlayClick: true, shouldCloseOnEsc: true, contentLabel: 'Action-Box Modal', overlayClassName: 'action-box-modal-overlay', className: 'action-box-modal-content' },
-            React.createElement(ActionCard, { onClose: handleCloseModal, currentData: currentData, onNext: handleNextClick })))) : (React.createElement(React.Fragment, null));
+            React.createElement(ActionCard, { onClose: handleCloseModal, currentData: currentData, onNext: handleNextClick })))) : (React.createElement(React.Fragment, null))));
 };
 
 export { ActionCard, ActionCardWidget, Button };

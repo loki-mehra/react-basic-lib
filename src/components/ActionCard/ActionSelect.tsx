@@ -1,7 +1,19 @@
 import React from 'react';
 import { CaretDownIcon } from '../shared/Icons';
 
-export const ActionSelect = ({ options, value, placeholder, onSelect }) => {
+export interface ActionSelectProps {
+  options: Array<object>;
+  onSelect: Function;
+  value: string;
+  placeholder?: string;
+}
+
+export const ActionSelect = ({
+  options,
+  value,
+  placeholder,
+  onSelect,
+}: ActionSelectProps) => {
   return (
     <div className='centered mb'>
       <div className='select-wrapper'>
@@ -12,7 +24,7 @@ export const ActionSelect = ({ options, value, placeholder, onSelect }) => {
           <option value='' className='muted-option'>
             {placeholder || 'Please select...'}
           </option>
-          {options.map((option) => (
+          {options.map((option: any) => (
             <option value={option.value} selected={option.value === value}>
               {option.name}
             </option>

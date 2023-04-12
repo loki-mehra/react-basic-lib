@@ -4,8 +4,20 @@ import '../shared/styles.css';
 import { ActionButton } from './ActionButton';
 import { ActionSelect } from './ActionSelect';
 
-export const ActionCard = ({ onClose, currentData, onNext }) => {
-  const [cardData, setCardData] = useState({});
+export interface ActionCardProps {
+  currentData: {
+    id: number;
+  };
+  onClose: Function;
+  onNext: Function;
+}
+
+export const ActionCard = ({
+  currentData,
+  onClose,
+  onNext,
+}: ActionCardProps) => {
+  const [cardData, setCardData] = useState<any>({});
   const [selected, setSelected] = useState('');
 
   useEffect(() => {
@@ -25,7 +37,7 @@ export const ActionCard = ({ onClose, currentData, onNext }) => {
     }
   };
 
-  const handleValueSelect = (newValue) => {
+  const handleValueSelect = (newValue: string) => {
     setSelected(newValue);
   };
 
@@ -80,7 +92,7 @@ export const ActionCard = ({ onClose, currentData, onNext }) => {
 
   return (
     <div className='action-box-card question-card'>
-      <div className='close' onClick={onClose}>
+      <div className='close' onClick={(e) => onClose(e)}>
         <CloseIcon />
       </div>
       <div className='centered'>

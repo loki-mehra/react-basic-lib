@@ -119,7 +119,7 @@ var ActionSelect = function (_a) {
 };
 
 var ActionCard = function (_a) {
-    var onClose = _a.onClose, currentData = _a.currentData, onNext = _a.onNext;
+    var currentData = _a.currentData, onClose = _a.onClose, onNext = _a.onNext;
     var _b = React.useState({}), cardData = _b[0], setCardData = _b[1];
     var _c = React.useState(''), selected = _c[0], setSelected = _c[1];
     React.useEffect(function () {
@@ -178,7 +178,7 @@ var ActionCard = function (_a) {
         return React__default["default"].createElement(React__default["default"].Fragment, null);
     };
     return (React__default["default"].createElement("div", { className: 'action-box-card question-card' },
-        React__default["default"].createElement("div", { className: 'close', onClick: onClose },
+        React__default["default"].createElement("div", { className: 'close', onClick: function (e) { return onClose(e); } },
             React__default["default"].createElement(CloseIcon, null)),
         React__default["default"].createElement("div", { className: 'centered' },
             React__default["default"].createElement(IdeaIcon, null)),
@@ -268,13 +268,13 @@ var ActionCardWidget = function () {
     var handleNextClick = function (nextId) {
         fetchQuestion(nextId);
     };
-    return currentData ? (React__default["default"].createElement(React__default["default"].Fragment, null,
+    return (React__default["default"].createElement("div", null, currentData ? (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: 'action-box-card widget-card' },
             React__default["default"].createElement(IdeaIcon, null),
             React__default["default"].createElement("h4", null, currentData.question),
             React__default["default"].createElement("button", { className: 'link', onClick: handleOpenModal }, "Read more")),
         React__default["default"].createElement(Modal__default["default"], { isOpen: isOpen, onRequestClose: handleCloseModal, shouldCloseOnOverlayClick: true, shouldCloseOnEsc: true, contentLabel: 'Action-Box Modal', overlayClassName: 'action-box-modal-overlay', className: 'action-box-modal-content' },
-            React__default["default"].createElement(ActionCard, { onClose: handleCloseModal, currentData: currentData, onNext: handleNextClick })))) : (React__default["default"].createElement(React__default["default"].Fragment, null));
+            React__default["default"].createElement(ActionCard, { onClose: handleCloseModal, currentData: currentData, onNext: handleNextClick })))) : (React__default["default"].createElement(React__default["default"].Fragment, null))));
 };
 
 exports.ActionCard = ActionCard;

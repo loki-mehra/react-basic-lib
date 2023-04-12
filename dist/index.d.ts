@@ -4,11 +4,14 @@ interface ButtonProps {
 }
 declare const Button: (props: ButtonProps) => JSX.Element;
 
-declare const ActionCard: ({ onClose, currentData, onNext }: {
-    onClose: any;
-    currentData: any;
-    onNext: any;
-}) => JSX.Element;
+interface ActionCardProps {
+    currentData: {
+        id: number;
+    };
+    onClose: Function;
+    onNext: Function;
+}
+declare const ActionCard: ({ currentData, onClose, onNext, }: ActionCardProps) => JSX.Element;
 
 declare const ActionCardWidget: () => JSX.Element;
 

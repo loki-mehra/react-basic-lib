@@ -8,7 +8,7 @@ import { dummyData } from '../shared/dummyData';
 
 export const ActionCardWidget = () => {
   const [isOpen, setOpen] = useState(false);
-  const [currentData, setCurrentData] = useState(null);
+  const [currentData, setCurrentData] = useState<any>(null);
 
   const fetchQuestion = (id: string) => {
     if (!id) {
@@ -35,32 +35,36 @@ export const ActionCardWidget = () => {
     fetchQuestion(nextId);
   };
 
-  return currentData ? (
-    <>
-      <div className='action-box-card widget-card'>
-        <IdeaIcon />
-        <h4>{currentData.question}</h4>
-        <button className='link' onClick={handleOpenModal}>
-          Read more
-        </button>
-      </div>
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={handleCloseModal}
-        shouldCloseOnOverlayClick={true}
-        shouldCloseOnEsc={true}
-        contentLabel='Action-Box Modal'
-        overlayClassName='action-box-modal-overlay'
-        className='action-box-modal-content'
-      >
-        <ActionCard
-          onClose={handleCloseModal}
-          currentData={currentData}
-          onNext={handleNextClick}
-        />
-      </Modal>
-    </>
-  ) : (
-    <></>
+  return (
+    <div>
+      {currentData ? (
+        <>
+          <div className='action-box-card widget-card'>
+            <IdeaIcon />
+            <h4>{currentData.question}</h4>
+            <button className='link' onClick={handleOpenModal}>
+              Read more
+            </button>
+          </div>
+          <Modal
+            isOpen={isOpen}
+            onRequestClose={handleCloseModal}
+            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={true}
+            contentLabel='Action-Box Modal'
+            overlayClassName='action-box-modal-overlay'
+            className='action-box-modal-content'
+          >
+            <ActionCard
+              onClose={handleCloseModal}
+              currentData={currentData}
+              onNext={handleNextClick}
+            />
+          </Modal>
+        </>
+      ) : (
+        <></>
+      )}
+    </div>
   );
 };

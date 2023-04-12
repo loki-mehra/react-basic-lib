@@ -1,7 +1,8 @@
 /// <reference types="react" />
-export declare const ActionSelect: ({ options, value, placeholder, onSelect }: {
-    options: any;
-    value: any;
-    placeholder: any;
-    onSelect: any;
-}) => JSX.Element;
+export interface ActionSelectProps {
+    options: Array<object>;
+    onSelect: Function;
+    value: string;
+    placeholder?: string;
+}
+export declare const ActionSelect: ({ options, value, placeholder, onSelect, }: ActionSelectProps) => JSX.Element;
